@@ -13,7 +13,7 @@ from geopy.distance import geodesic
 from plotly.express import scatter_geo
 
 # Load models
-crime_model = joblib.load("models/crime_type_model.pkl")
+crime_model = joblib.load("models/crime_type_model2.pkl")
 with open("models/crime_trend_model.pkl", "rb") as f:
     crime_trend_model = joblib.load(f)
 dbscan_model = joblib.load('models/high_risk_zones_model.pkl')
