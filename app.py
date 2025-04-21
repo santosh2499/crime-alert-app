@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import pickle
 from datetime import datetime, timedelta
 from geopy.geocoders import Nominatim
 import geocoder
@@ -16,7 +15,7 @@ from plotly.express import scatter_geo
 # Load models
 crime_model = joblib.load("models/crime_type_model.pkl")
 with open("models/crime_trend_model.pkl", "rb") as f:
-    crime_trend_model = pickle.load(f)
+    crime_trend_model = joblib.load(f)
 dbscan_model = joblib.load('models/high_risk_zones_model.pkl')
 
 # Label mapping for the Random Forest classifier
